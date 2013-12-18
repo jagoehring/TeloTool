@@ -1,11 +1,11 @@
-TeloTool - Step-by-Step instructions (with example gel)
+TeloTool - Step-by-Step instructions 
 ========
 <ol>
   <li> TeloTool can only be used on a 64bit Windows Platform.  </li>
   <li> Please download and install the 64bit MATLAB Compiler Runtime (MCR) (version 7.17 (R2012a), freely available at the Mathworks webpage http://www.mathworks.com/products/compiler/mcr/).</li>
   <li> Start TeloTool.</li>
-  <li> Load the example membrane via ‘Load Image’.</li>
-  <li> Invert via ‘Invert Image’, so that the image has a dark background.</li>
+  <li> Load a TRF gel (in .tif format) via ‘Load Image’.</li>
+  <li> [Optional] Invert via ‘Invert Image’, so that the image has a dark background.</li>
   <li> Press ‘Calculate Lanes’. White rectangles will appear in the main axis, which represent the automatically recognized lanes. </li>
   
     <ol>
@@ -15,11 +15,11 @@ TeloTool - Step-by-Step instructions (with example gel)
 
   <li>Press ‘Lane Profiles’ to fill the list box with intensity profiles of the recognized lanes.</li>
   <li> Press ‘left ladder’ within the list box. The intensity profile of the left ladder will be displayed in the profile axis next to the main axis. The y-axis represents the pixel position. </li> 
-  <li> Press ‘Ladder Values’ to open a GUI with the values of the ladder. The standard has the sizes [10000;8000;6000;5000;4000;3500;3000;2500;2000]. Here, it is also possible to load the text-file ‘standard_ladder_for_example_gel.txt’. Press ‘Apply Ladder Values’. TeloTool will always automatically remember the last ladder used. </li> 
+  <li> Press ‘Ladder Values’ to open a GUI with the values of the ladder. Here, it is also possible to load the text-file containing the ladder values in the format [max value;intermediates;min value]. Press ‘Apply Ladder Values’. TeloTool will always automatically remember the last ladder used. </li> 
   <li> Press ‘Adjust Ladder’. A new GUI will open, which displays the left and the right ladder with the automatically recognized extrema as red dots. </li> 
     <ol>
-      <li>The left ladder has one wrongly recognized extremum, press ‘Delete Extrenum’ and click and drag into the axis to remove it (it may take 2-3 seconds until the program reacts). Press ‘Reset’ to remove the selection.</li> 
-      <li>The right ladder has ten peaks, whereas the left has only nine extremas. In order to have the same number of elements in both ladders, the peak on the far right has to be removed (the band with the lowest molecular weight).</li> 
+      <li>If there are wrongly recognized extrema, press ‘Delete Extrenum’ and click and drag into the axis to remove it (it may take 2-3 seconds until the program reacts). Press ‘Reset’ to remove the selection.</li> 
+      <li> It is necessary that the same number of peaks is recognized in both ladders. The 'ladder values' also need to have the same number of elements. </li> 
       <li>‘Apply and Close’</li> 
     </ol>
   <li>[Optional] The ladder is automatically fitted with a polynomial fit of the 3rd order. Press ‘Ladder Fit’ to change and compare the fits. </li> 
